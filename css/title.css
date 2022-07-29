@@ -1,0 +1,230 @@
+#title {
+  height: 100%;
+  background-color: #ccc;
+  min-height: 480px;
+  position:relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  width: calc(100% - 150px);
+/*   margin-right: 150px; */
+/*   margin-left : 150px; */
+  left: 150px;             /*position 속성이 있어야 left, right, top 값을 쓸수 있다.*/ */ */ */
+}
+#title::before{
+  content:"";
+  display: block;
+  position: absolute;
+  width: 75%;
+  height: 100%;
+  background-color: black;
+}
+
+#title div.inner {
+  width: 80%;
+  position: relative;
+  z-index: 2;
+  color: white;
+  height: 673px ;
+}
+#title div.inner h2{
+  position: relative;
+  z-index: 1;
+  font-size: 60px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  /* gbst   */
+  overflow: hidden;
+}
+#title div.inner h2 span{
+  display: block;
+  animation-name: h2up;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+  animation-direction: reverse;
+  animation-timing-function: ease-out;
+}
+
+@keyframes h2up{
+  0%{
+    transform: translateY(0);
+    opacity: 1;
+  }
+  100%{
+    transform: translateY(100%);
+    opacity: 0.4;
+  }
+}
+
+#title div.inner p{
+  font-size: 20px;
+  font-weight: 700;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+}
+
+
+
+/************************************************/
+
+/* #title div.inner p ::after{ 
+  content:"view more";
+  display: block;
+  width: 100px;
+  height: 100px;
+  border: 2px solid red;
+  
+} */
+
+/**************************************************/
+
+
+
+
+#title div.inner p span{
+  display: block;
+  animation-name: pup;
+  animation-duration: 0.9s;
+  animation-fill-mode: forwards;
+  animation-direction: reverse;
+  animation-timing-function: ease-out;
+/*   animation-delay:  1s; */
+}
+
+@keyframes pup{
+  0%{
+    transform: translateY(0);
+    opacity: 1;
+  }
+  50%{
+    transform: translateY(100%);
+    opacity: 0.5;
+  }
+  100%{
+    transform: translateY(100%);
+    opacity: 0.2;
+  }
+}
+#title div.inner br{
+  
+}
+
+#title div.inner .iframe{
+  
+  position: absolute;
+  width: 1188px;
+  height: 673px;
+  bottom : 0 ;
+  right: 0;
+/*   transform-origin: bottom right;
+  transform : translateY  (30px); */
+}
+
+#title span.titleaside{
+  position: absolute;
+  right: calc(20% /4 - 82px);
+  bottom: 60px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  height: 500px;
+  width: 164px;
+}
+
+#title span.titleaside .campaign{
+
+  transform: rotate(90deg) translateX(78px);
+  
+  font-size: 15px;
+}
+
+#title span.titleaside .scroll{
+  position: relative;
+  font-size: 13px;
+  text-transform: uppercase;
+  animation-name: colorchange;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+}
+@keyframes colorchange{
+  0%{
+    color: #000;
+  }
+  20%{
+    color: gold;
+  }
+  100%{
+    color: #000;
+  }
+}
+
+#title span.titleaside .scroll::before{
+  content: "";
+  border: 2px solid black;
+  display: block;
+  width: 5px;
+  height: 5px;
+  position: absolute; 
+  border-top: transparent;
+  border-left: transparent;
+  transform: scale(0.5) translateY(-10px) rotate(45deg);
+  top: -10px;
+  left: calc(50% - 7.5px);
+  animation-name: scrollani1;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;  
+/*   animation-fill-mode: forwards;
+  animation-timing-function: ease; */
+}
+@keyframes scrollani1{
+  0%{
+    opacity: 0;
+  }
+  30%{
+    opacity: 1;
+  }
+  40%{
+    opacity: 0;
+  }
+  50%{
+    opacity: 1;
+  }
+  100%{
+    opacity: 0;
+  }
+}
+
+#title span.titleaside .scroll::after{
+  content: "";
+  border: 2px solid gray;
+  display: block;
+  width: 5px;
+  height: 5px;
+  position: absolute; 
+  border-top: transparent;
+  border-left: transparent;
+  transform: scale(0.5) translateY(-10px) rotate(45deg);
+  top: -20px;
+  left: calc(50% - 7.5px);
+  animation-name: scrollani2;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+/*   animation-fill-mode: backwards;
+  animation-timing-function: ease; */
+}
+@keyframes scrollani2{
+  0%{
+    opacity: 0;
+  }
+  30%{
+    opacity: 1;
+  }
+  50%{
+    opacity: 0;
+  }
+  100%{
+    opacity: 0;
+  }
+}

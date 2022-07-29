@@ -1,0 +1,154 @@
+#service {
+  
+}
+#service div.inner {
+  padding-bottom: 500px;
+  position: relative;
+}
+#service div.inner hgroup {
+  
+}
+#service div.inner hgroup h2 {
+  
+}
+#service div.inner hgroup h3 {
+  line-height: 2;
+  
+}
+#service div.inner div.contents {
+  flex-wrap: wrap;
+  row-gap: 150px;
+  margin-top: 60px;
+  column-gap: 50px;
+
+}
+#service div.inner div.contents article {
+  width: calc(100%/3 - 100px/3);
+}
+#service div.inner div.contents article:nth-child(3n+1){
+  transform: translateY(25%);
+}
+#service div.inner div.contents article:nth-child(3n+2){
+  transform: translateY(50%);
+}
+#service div.inner div.contents article a {
+  
+
+}
+#service div.inner div.contents article a::before {
+  content:"";
+  width: 100%;
+  display: block;
+  height: 595px;
+  background-position: center;
+  background-size: cover;
+  transition: all 0.5s;
+  box-sizing: border-box;
+  background-origin: border-box;
+  border: 0px solid rgba(0,255,0,0);
+}
+
+/********************************************  */
+#service div.inner div.contents article a:hover::before{
+  border: 50px solid rgba(0,255,0,7);
+}
+/********************************************  */
+#service div.inner div.contents article:nth-child(1) a::before{
+  content:"";
+  width: 100%;
+  display: block;
+  height: 595px;
+  background-image: url(../img/main-service-01.jpg);
+}
+#service div.inner div.contents article:nth-child(2) a::before{
+  content:"";
+  width: 100%;
+  display: block;
+  height: 595px;
+  background-image: url(../img/main-service-02-1.jpg);
+}
+#service div.inner div.contents article:nth-child(3) a::before{
+  content:"";
+  width: 100%;
+  display: block;
+  height: 595px;
+  background-image: url(../img/main-service-03.jpg);
+}
+#service div.inner div.contents article:nth-child(4) a::before{
+  content:"";
+  width: 100%;
+  display: block;
+  height: 595px;
+  background-image: url(../img/main-service-04.jpg);
+}
+#service div.inner div.contents article:nth-child(5) a::before{
+  content:"";
+  width: 100%;
+  display: block;
+  height: 595px;
+  background-image: url(../img/main-service-05-1.jpg);
+}
+#service div.inner div.contents article:nth-child(6) a::before{
+  content:"";
+  width: 100%;
+  display: block;
+  height: 595px;
+  background-image: url(../img/main-service-06.jpg);
+}
+
+
+
+
+
+
+#service div.inner div.contents article a h4 {
+  line-height:  1.3;
+  margin: 10px 0 ;
+  /* 기범 st    */
+
+  
+}
+#service div.inner div.contents article a p {
+  font-weight: 500;
+  color: gray;
+}
+#service div.inner div.contents article a p:nth-of-type(1){
+  color: #999;
+}
+
+#service div.inner div.contents a.more {
+  position: absolute;
+  bottom: 20px;
+  left: calc(50% - 50px);
+  width: 100px;
+  text-align: center;
+  padding-right: 40px;
+}
+
+#service div.inner div.contents a.more::before{
+  content: "";
+  display: block;
+  width: 50px;
+  height: 2px;
+  background-color: red;
+  position: absolute;
+/*   bottom: 6px; */
+/*   left: calc(50% + 25px); */
+  right: 0;
+  top: calc(50% - 1px);
+}
+#service div.inner div.contents a.more::after{
+  content: "";
+  display: block;
+  border: 2px solid red;
+  width: 8px;
+  height: 8px;
+  border-top: transparent;
+  border-left: transparent;
+  transform: rotate(-45deg);
+  position: absolute;
+/*   bottom: 2px; */
+/*   left: calc(50% + 63px); */
+  right: 0;
+  top: calc(50% - 5px);
+}
